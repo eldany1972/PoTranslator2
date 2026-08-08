@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "potranslator"
+version = "2.0.0"
+description = "Professional multi-language PO localization workspace"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+potranslator = "potranslator.app:main"
+
+[tool.setuptools.packages.find]
+include = ["potranslator*"]
+

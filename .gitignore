@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.build_tools/
+build/
+*.tmp
+
+# Local tooling config, machine-specific and not part of the project.
+.claude/settings.local.json
+.agents/
+
