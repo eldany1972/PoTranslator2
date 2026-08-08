@@ -4,6 +4,10 @@ __pycache__/
 build/
 *.tmp
 
+# Built executables are published as GitHub Release assets, not tracked here —
+# a binary in git history stops shrinking the repo forever, unlike a Release upload.
+dist/
+
 # Local tooling config, machine-specific and not part of the project.
 .claude/settings.local.json
 .agents/
