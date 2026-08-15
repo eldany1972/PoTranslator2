@@ -1373,8 +1373,12 @@ class PoTranslatorApp(tk.Tk):
         entry = self._entry_by_uid(self.current_uid)
         if not entry:
             return
+        code = self._detail_language_code()
+        if not code:
+            messagebox.showwarning(APP_NAME, "Select a language in the Translation panel first.", parent=self)
+            return
         self.save_detail(silent=True)
-        self._start_translation_entries([entry], skip_completed=False)
+        self._start_translation_entries([entry], skip_completed=False, language_codes=[code])
 
     def start_translation(self, mode: str | None = None, all_languages: bool = False) -> None:
         if not self.project:
